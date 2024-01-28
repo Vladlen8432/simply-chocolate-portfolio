@@ -1,0 +1,118 @@
+:root {
+  --anti-flash-white: #fafafa;
+  --very-dark-gray: #111;
+  --white-color: #fff;
+  --orange-color: #fd9222;
+  --dark-purple: #1e1823;
+  --warm-shade: #fcf1e0;
+  --semi-transparent-white-one: rgba(255, 255, 255, 0.5);
+  --semi-transparent-white-two: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  background-color: var(--anti-flash-white);
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 375px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ==================== HEADER ==================== */
+
+.container-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 14px;
+}
+
+.logo-header {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.logo-header-text {
+  color: var(--very-dark-gray);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.42px;
+}
+
+.span-header {
+  font-style: italic;
+}
+
+.logo-header-icon {
+  width: 21px;
+  height: 21px;
+}
+
+nav {
+  display: none;
+}
+
+.social-header {
+  display: none;
+}
+
+.menu-header {
+  width: 28px;
+  height: 28px;
+}
