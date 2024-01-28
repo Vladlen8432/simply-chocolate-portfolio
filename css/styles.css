@@ -17,6 +17,18 @@ body {
   background-color: var(--anti-flash-white);
 }
 
+header {
+  width: 100vw;
+}
+
+main {
+  width: 100vw;
+}
+
+footer {
+  width: 100vw;
+}
+
 button {
   cursor: pointer;
 }
@@ -47,7 +59,6 @@ img {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
 }
 
 .list {
@@ -124,5 +135,8 @@ nav {
 /* ========== HERO========== */
 
 .container-hero {
+  width: 100%;
   background-color: orange;
+  background-position: center;
+  box-sizing: border-box;
 }
