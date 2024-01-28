@@ -17,18 +17,6 @@ body {
   background-color: var(--anti-flash-white);
 }
 
-header {
-  width: 100vw;
-}
-
-main {
-  width: 100vw;
-}
-
-footer {
-  width: 100vw;
-}
-
 button {
   cursor: pointer;
 }
@@ -85,12 +73,14 @@ img {
 
 /* ==================== HEADER ==================== */
 
-.container-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.section-header {
   padding-top: 20px;
   padding-bottom: 14px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo-header {
@@ -134,9 +124,40 @@ nav {
 /* ==================== MAIN ==================== */
 /* ========== HERO========== */
 
+.hero {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .container-hero {
-  width: 100%;
-  background-color: orange;
-  background-position: center;
+  background-image: url('../images/hero/bg-hero-mob2x.jpg');
+  border-radius: 30px;
   box-sizing: border-box;
 }
+
+/* .hero {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.container-hero {
+  background-image: url('../images/hero/bg-hero-mob2x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  box-sizing: border-box;
+} */
+
+/* .container-hero {
+  width: 100%;
+  background-color: orange;
+  border-radius: 30px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 420px) {
+  .container-hero {
+    margin-left: 20px;
+  }
+} */
