@@ -47,6 +47,7 @@ img {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
+  box-sizing: border-box;
 }
 
 .list {
@@ -117,4 +118,11 @@ nav {
   width: 28px;
   height: 28px;
   cursor: pointer;
+}
+
+/* ==================== MAIN ==================== */
+/* ========== HERO========== */
+
+.container-hero {
+  background-color: orange;
 }
