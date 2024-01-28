@@ -18,6 +18,7 @@ body {
 }
 
 button {
+  padding: 0;
   cursor: pointer;
 }
 
@@ -130,34 +131,101 @@ nav {
 }
 
 .container-hero {
-  background-image: url('../images/hero/bg-hero-mob2x.jpg');
-  border-radius: 30px;
-  box-sizing: border-box;
-}
-
-/* .hero {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.container-hero {
-  background-image: url('../images/hero/bg-hero-mob2x.jpg');
+  background-image: linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.4)),
+    url("../images/hero/bg-hero-mob2x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 30px;
   box-sizing: border-box;
-} */
-
-/* .container-hero {
-  width: 100%;
-  background-color: orange;
-  border-radius: 30px;
-  justify-content: center;
-  box-sizing: border-box;
+  padding-top: 395px;
+  padding-bottom: 20px;
 }
 
-@media screen and (max-width: 420px) {
-  .container-hero {
-    margin-left: 20px;
-  }
-} */
+.header-hero {
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  /* 120% */
+  letter-spacing: -0.6px;
+  max-width: 280px;
+}
+
+.buttons-hero-click {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.button-buy-now-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--white-color);
+  min-width: 120px;
+  min-height: 41px;
+  border-radius: 100px;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button-buy-now-hero:hover,
+.button-buy-now-hero:focus {
+  background-color: var(--orange-color);
+  border: 1px solid var(--orange-color);
+}
+
+.button-how-made-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--white-color);
+  width: 100%;
+  min-height: 41px;
+  border-radius: 100px;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button-how-made-hero:hover,
+.button-how-made-hero:focus {
+  background-color: var(--orange-color);
+  border: 1px solid var(--orange-color);
+}
+
+.container-buttons-hero-scroll {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.scroll-text {
+  color: var(--white-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  /* 116.667% */
+  letter-spacing: -0.36px;
+}
+
+.scroll-icon-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--orange-color);
+  border-radius: 50%;
+  padding: 6px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white-color);
+  cursor: pointer;
+}
