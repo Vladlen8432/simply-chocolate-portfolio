@@ -50,6 +50,18 @@ img {
   margin-left: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 .list {
   list-style: none;
 }
@@ -79,9 +91,33 @@ img {
   padding-bottom: 14px;
 }
 
+@media screen and (min-width: 768px) {
+  .section-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
 .container-header {
   display: flex;
   justify-content: space-between;
+}
+
+/* .container-header for tablet has the same properties */
+
+@media screen and (min-width: 1200px) {
+  .container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .logo-header {
@@ -90,6 +126,8 @@ img {
   align-items: center;
 }
 
+/* .logo-header for tablet has the same properties */
+
 .logo-header-text {
   color: var(--very-dark-gray);
   font-size: 14px;
@@ -97,6 +135,16 @@ img {
   font-weight: 700;
   line-height: 18px;
   letter-spacing: -0.42px;
+}
+
+/* .logo-header-text for tablet has the same properties */
+
+@media screen and (min-width: 1200px) {
+  .logo-header-text {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.54px;
+  }
 }
 
 .span-header {
@@ -112,14 +160,57 @@ nav {
   display: none;
 }
 
+/* nav for tablet has the same properties */
+
+@media screen and (min-width: 1200px) {
+  nav {
+    display: block;
+  }
+}
+
+.list-header {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  color: var(--very-dark-gray);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.28px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--orange-color);
+}
+
 .social-header {
   display: none;
 }
 
-.menu-header {
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
+@media screen and (min-width: 1200px) {
+  .social-header {
+    display: flex;
+    gap: 18px;
+  }
+
+  .social-header-icon {
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+  }
+
+  .social-header-link:hover .social-header-icon,
+  .social-header-link:focus .social-header-icon {
+    fill: var(--orange-color);
+  }
+
+  .menu-header {
+    display: none;
+  }
 }
 
 /* ==================== MAIN ==================== */
@@ -141,6 +232,23 @@ nav {
   padding-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .container-hero {
+    position: relative;
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url("../images/hero/bg-hero-tab2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding-top: 671px;
+    padding-bottom: 40px;
+  }
+}
+
 .header-hero {
   color: var(--white-color);
   font-size: 20px;
@@ -151,11 +259,25 @@ nav {
   max-width: 280px;
 }
 
+@media screen and (min-width: 768px) {
+  .header-hero {
+    font-size: 28px;
+    line-height: 34px; /* 121.429% */
+    letter-spacing: -0.84px;
+
+    max-width: 484px;
+    height: auto;
+    /* Зробити як на макеті */
+  }
+}
+
 .buttons-hero-click {
   display: flex;
   gap: 14px;
   margin-top: 32px;
 }
+
+/* .buttons-hero-click for tablet and desktop has the same properties */
 
 .button-buy-now-hero {
   display: flex;
@@ -171,6 +293,13 @@ nav {
   font-size: 14px;
   font-weight: 600;
   transition: background-color 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .button-buy-now-hero {
+    min-width: 144px;
+    min-height: 45px;
+  }
 }
 
 .button-buy-now-hero:hover,
@@ -195,6 +324,13 @@ nav {
   transition: background-color 0.3s ease;
 }
 
+@media screen and (min-width: 768px) {
+  .button-how-made-hero {
+    width: 183px;
+    height: 45px;
+  }
+}
+
 .button-how-made-hero:hover,
 .button-how-made-hero:focus {
   background-color: var(--orange-color);
@@ -206,6 +342,14 @@ nav {
   align-items: center;
   gap: 12px;
   margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-buttons-hero-scroll {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+  }
 }
 
 .scroll-text {
