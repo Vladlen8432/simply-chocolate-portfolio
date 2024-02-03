@@ -234,7 +234,6 @@ nav {
 
 @media screen and (min-width: 768px) {
   .container-hero {
-    position: relative;
     background-image: linear-gradient(
         rgba(17, 17, 17, 0),
         rgba(17, 17, 17, 0.4)
@@ -246,6 +245,26 @@ nav {
     box-sizing: border-box;
     padding-top: 671px;
     padding-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-hero {
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url("../images/hero/bg-hero-desk2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding-top: 381px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -268,6 +287,14 @@ nav {
     max-width: 484px;
     height: auto;
     /* Зробити як на макеті */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-hero-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
   }
 }
 
@@ -344,13 +371,12 @@ nav {
   margin-top: 32px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .container-buttons-hero-scroll {
-    position: absolute;
     right: 40px;
     bottom: 40px;
   }
-}
+} */
 
 .scroll-text {
   color: var(--white-color);
