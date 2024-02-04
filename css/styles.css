@@ -84,6 +84,8 @@ img {
   overflow: hidden;
 }
 
+/* ______________________________ - element has the same properties  */
+
 /* ==================== HEADER ==================== */
 
 .section-header {
@@ -371,6 +373,7 @@ nav {
   align-items: center;
   gap: 12px;
   margin-top: 32px;
+  cursor: pointer;
 }
 
 .scroll-text {
@@ -380,6 +383,7 @@ nav {
   line-height: 14px;
   /* 116.667% */
   letter-spacing: -0.36px;
+  transition: color 0.3s ease;
 }
 
 .scroll-icon-hero {
@@ -392,9 +396,19 @@ nav {
   width: 16px;
   height: 16px;
   background-color: var(--white-color);
-  cursor: pointer;
+  transition: background-color 0.3s ease, fill 0.3s ease;
 }
 
+.container-buttons-hero-scroll:hover .scroll-text,
+.container-buttons-hero-scroll:focus .scroll-text {
+  color: var(--orange-color);
+}
+
+.container-buttons-hero-scroll:hover .scroll-icon-hero,
+.container-buttons-hero-scroll:focus .scroll-icon-hero {
+  background-color: var(--orange-color);
+  fill: var(--white-color);
+}
 /* ========== SECTION ONE ========== */
 
 .section-one {
@@ -503,6 +517,13 @@ nav {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .section-two {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container-section-two {
     display: block;
@@ -537,6 +558,16 @@ nav {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header-section-two {
+    font-size: 24px;
+    line-height: 28px;
+    max-width: 411px;
+  }
+}
+
+/* ______________________________ */
+
 .span-taste {
   color: var(--orange-color);
 }
@@ -560,6 +591,8 @@ nav {
   }
 }
 
+/* ______________________________ */
+
 .container-images-section-two {
   display: flex;
   flex-direction: column;
@@ -577,6 +610,15 @@ nav {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container-images-section-two {
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    column-gap: 19px;
+  }
+}
+
 .image-section-two {
   position: relative;
   display: flex;
@@ -584,11 +626,56 @@ nav {
   width: 100%;
   height: 270px;
   border-radius: 15px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.image-section-two:hover,
+.image-section-two:focus {
+  background-color: var(--orange-color);
+}
+
+.image-section-two:hover .image-header {
+  color: var(--white-color);
 }
 
 @media screen and (min-width: 768px) {
   .image-section-two {
     width: 336px;
+  }
+
+  .img-order-chocolate {
+    order: 1;
+  }
+
+  .img-order-milk {
+    order: 3;
+  }
+
+  .img-order-nuts {
+    order: 4;
+  }
+
+  .img-order-kakao {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .img-order-chocolate {
+    order: 1;
+  }
+
+  .img-order-milk {
+    order: 2;
+  }
+
+  .img-order-nuts {
+    order: 3;
+  }
+
+  .img-order-kakao {
+    order: 4;
   }
 }
 
@@ -618,6 +705,7 @@ nav {
   line-height: 18px; /* 128.571% */
   letter-spacing: -0.28px;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .image-header-light {
