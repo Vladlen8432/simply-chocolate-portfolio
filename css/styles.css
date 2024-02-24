@@ -9,6 +9,7 @@
   --light-silver: #eceded;
   --semi-transparent-white-one: rgba(255, 255, 255, 0.5);
   --semi-transparent-white-two: rgba(255, 255, 255, 0.7);
+  --semi-transparent-white-three: rgba(255, 255, 255, 0.1);
   --very-dark-shade-one: rgba(17, 17, 17, 0.1);
   --very-dark-shade-two: rgba(17, 17, 17, 0.7);
 }
@@ -1507,10 +1508,21 @@ iframe {
 
 /* ==================== FOOTER ==================== */
 
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
 .subcontainer-footer {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+}
+
+.container-contact {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-footer {
@@ -1520,20 +1532,91 @@ iframe {
   font-weight: 500;
   line-height: 28px;
   letter-spacing: -0.48px;
+  max-width: 300px;
 }
 
 .span-footer {
   color: var(--orange-color);
 }
 
-.container-social {
+.container-contact-address {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.contact-us {
+  color: var(--white-color);
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.contact-item {
+  color: var(--white-color);
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+}
+
+.phone-link,
+.mail-link {
+  color: var(--white-color);
+}
+
+/* .container-social {
+  display: flex;
+  gap: 14px;
+} */
+
+.social-icon-footer {
+  width: 22px;
+  height: 22px;
+}
+
+.container-contact-social {
   display: flex;
   gap: 14px;
 }
 
 .social-icon-footer {
-  width: 22px;
-  height: 22px;
+  fill: var(--white-color);
+}
+
+.footer-line {
+  background-color: var(--semi-transparent-white-three);
+  height: 1px;
+  width: 100%;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.footer-list-item {
+  color: var(--white-color);
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.28px;
+}
+
+.footer-list-link {
+  color: var(--white-color);
 }
 
 /* transition: background-color 0.3s ease, fill 0.3s ease;
