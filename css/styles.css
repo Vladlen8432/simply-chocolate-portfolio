@@ -1715,11 +1715,11 @@ iframe {
   right: 0;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .modal {
     display: none;
   }
-} */
+}
 
 .container-modal {
   position: relative;
@@ -1733,6 +1733,14 @@ iframe {
   height: 28px;
   top: 20px;
   right: 20px;
+  stroke: var(--white-color);
+  stroke-width: 2;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn-modal:hover,
+.close-btn-modal:focus {
+  stroke: var(--orange-color);
 }
 
 .list-modal {
@@ -1752,6 +1760,45 @@ iframe {
   font-weight: 500;
   line-height: 16px; /* 114.286% */
   letter-spacing: -0.28px;
+}
+
+.list-modal-social {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 18px;
+  list-style: none;
+}
+
+.list-modal-social-icon {
+  fill: var(--white-color);
+  width: 22px;
+  height: 22px;
+}
+
+.link-modal-item {
+  color: var(--white-color);
+  font-family: "Montserrat";
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.28px;
+  transition: color 0.3s ease;
+}
+
+.link-modal-item:hover,
+.link-modal-item:focus {
+  color: var(--orange-color);
+}
+
+.link-modal-social-icon {
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+
+.link-modal-social-item:hover .link-modal-social-icon,
+.link-modal-social-item:focus .link-modal-social-icon {
+  fill: var(--orange-color);
 }
 
 /* transition: background-color 0.3s ease, fill 0.3s ease;
