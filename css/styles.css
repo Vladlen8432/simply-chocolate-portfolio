@@ -1055,13 +1055,31 @@ iframe {
   border: none;
 }
 
-.pagination-item-selected {
+.pagination-item:hover {
+  background-color: var(--orange-color);
+  /* width: 28px;
+  height: 13px; */
+  border-radius: 100px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-item:focus {
   background-color: var(--orange-color);
   width: 28px;
   height: 13px;
   border-radius: 100px;
   border: none;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease;
 }
+
+/* .pagination-item-selected {
+  background-color: var(--orange-color);
+  width: 28px;
+  height: 13px;
+  border-radius: 100px;
+  border: none;
+} */
 
 /* ========== SECTION FIVE ========== */
 
@@ -1353,14 +1371,24 @@ iframe {
   width: 13px;
   height: 13px;
   border-radius: 50%;
+  transition: background-color 0.3s ease, width 0.3s ease;
 }
 
-.pagination-item-sec-six-selected {
+.pagination-item-sec-six:hover,
+.pagination-item-sec-six:focus {
   background-color: var(--orange-color);
   width: 28px;
   height: 13px;
   border-radius: 100px;
+  cursor: pointer;
 }
+
+/* .pagination-item-sec-six-selected {
+  background-color: var(--orange-color);
+  width: 28px;
+  height: 13px;
+  border-radius: 100px;
+} */
 
 .container-button-lave-review {
   display: flex;
@@ -1637,10 +1665,13 @@ iframe {
 .social-icon-footer {
   width: 22px;
   height: 22px;
+  cursor: pointer;
+  fill: var(--white-color);
+  transition: fill 0.3s ease;
 }
 
-.social-icon-footer {
-  fill: var(--white-color);
+.social-icon-footer:hover {
+  fill: var(--orange-color);
 }
 
 .footer-list {
@@ -1667,6 +1698,60 @@ iframe {
 
 .footer-list-link {
   color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+.footer-list-link:hover,
+.footer-list-link:focus {
+  color: var(--orange-color);
+}
+
+.modal {
+  position: absolute;
+  width: 220px;
+  height: 100%;
+  background-color: var(--dark-purple);
+  top: 0;
+  right: 0;
+}
+
+/* @media screen and (min-width: 768px) {
+  .modal {
+    display: none;
+  }
+} */
+
+.container-modal {
+  position: relative;
+}
+
+.close-btn-modal {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  top: 20px;
+  right: 20px;
+}
+
+.list-modal {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin-top: 136px;
+  margin-left: 50px;
+  list-style: none;
+}
+
+.list-modal-item {
+  color: var(--white-color);
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.28px;
 }
 
 /* transition: background-color 0.3s ease, fill 0.3s ease;
