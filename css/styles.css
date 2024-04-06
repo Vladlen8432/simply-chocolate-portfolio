@@ -1691,7 +1691,7 @@ iframe {
 }
 
 .modal {
-  /* display: none; */
+  display: none;
   position: absolute;
   width: 220px;
   height: 100%;
