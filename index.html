@@ -216,13 +216,32 @@
 
           <div class="container-video-list">
             <div class="container-video">
-              <iframe
+              <div class="container-preview-video">
+                <picture>
+                  <source
+                    srcset="./images/section-three/preview-tab-desk.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="preview-video"
+                    src="./images/section-three/preview-mobile.jpg"
+                    alt=""
+                  />
+                </picture>
+
+                <img
+                  class="button-video"
+                  src="./images/section-three/play.png"
+                  alt="BUTTON VIDEO"
+                />
+              </div>
+              <!-- <iframe
                 src="https://www.youtube.com/embed/KEqpwpfFfhE?si=MhbrZOQsdM2LRDGK"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
-              ></iframe>
+              ></iframe> -->
             </div>
 
             <div class="container-list">
