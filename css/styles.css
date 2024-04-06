@@ -1053,33 +1053,17 @@ iframe {
   height: 13px;
   border-radius: 50%;
   border: none;
+  transition: background-color 0.3s ease, width 0.3s ease;
 }
 
-.pagination-item:hover {
-  background-color: var(--orange-color);
-  /* width: 28px;
-  height: 13px; */
-  border-radius: 100px;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
+.pagination-item:hover,
 .pagination-item:focus {
   background-color: var(--orange-color);
   width: 28px;
   height: 13px;
   border-radius: 100px;
   border: none;
-  transition: width 0.3s ease-in-out, background-color 0.3s ease;
 }
-
-/* .pagination-item-selected {
-  background-color: var(--orange-color);
-  width: 28px;
-  height: 13px;
-  border-radius: 100px;
-  border: none;
-} */
 
 /* ========== SECTION FIVE ========== */
 
@@ -1707,6 +1691,7 @@ iframe {
 }
 
 .modal {
+  /* display: none; */
   position: absolute;
   width: 220px;
   height: 100%;
@@ -1796,8 +1781,8 @@ iframe {
   transition: fill 0.3s ease;
 }
 
-.link-modal-social-item:hover .link-modal-social-icon,
-.link-modal-social-item:focus .link-modal-social-icon {
+.link-modal-social-item:hover .list-modal-social-icon,
+.link-modal-social-item:focus .list-modal-social-icon {
   fill: var(--orange-color);
 }
 
