@@ -25,10 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttonVideo = document.querySelector(".button-video");
 
   buttonVideo.addEventListener("click", function () {
-    const container = buttonVideo.closest(".container-preview-video");
-    const pictureElement = container.querySelector("picture");
+    const container = buttonVideo.closest(".container-video");
 
-    pictureElement.remove();
+    const previewVideoContainer = container.querySelector(
+      ".container-preview-video"
+    );
+
+    previewVideoContainer.remove();
 
     const iframeElement = document.createElement("iframe");
     iframeElement.src =
@@ -46,3 +49,42 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonVideo.style.display = "none";
   });
 });
+
+/* ========== Ingredient modal open ========== */
+
+function setupIngredientSection(imageId, descrId, backId) {
+  const imageSection = document.getElementById(imageId);
+  const descrSection = document.getElementById(descrId);
+  const imageSectionReturn = document.getElementById(backId);
+
+  imageSection.addEventListener("click", function () {
+    descrSection.style.display = "block";
+    imageSection.style.display = "none";
+  });
+
+  imageSectionReturn.addEventListener("click", function () {
+    descrSection.style.display = "none";
+    imageSection.style.display = "flex";
+  });
+}
+
+setupIngredientSection(
+  "image-ingredient-milk-chocolate",
+  "descr-ingredient-milk-chocolate",
+  "back-chocolate"
+);
+setupIngredientSection(
+  "image-ingredient-milk",
+  "descr-ingredient-milk",
+  "back-milk"
+);
+setupIngredientSection(
+  "image-ingredient-nuts",
+  "descr-ingredient-nuts",
+  "back-nuts"
+);
+setupIngredientSection(
+  "image-ingredient-semi",
+  "descr-ingredient-semi",
+  "back-semi"
+);
