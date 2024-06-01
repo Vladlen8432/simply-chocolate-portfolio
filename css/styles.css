@@ -759,16 +759,7 @@ nav {
 
 @media screen and (min-width: 768px) {
   .container-product-descr {
-    max-width: 368px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container-product-descr {
-    width: 270px;
-    height: 270px;
-    /* overflow-y: scroll;
-    display: none; */
+    width: calc((100% - 32px) / 2);
   }
 }
 
