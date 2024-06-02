@@ -1175,7 +1175,22 @@ iframe {
   transition: background-color 0.3s ease, width 0.3s ease;
 }
 
-.pagination-item:hover,
+@media (max-width: 767px) {
+  .pagination-section-four .pagination-item {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .pagination-section-four .pagination-item:nth-child(n + 6) {
+    display: none;
+  }
+}
+
+.pagination-item:hover {
+  background-color: var(--orange-color);
+}
+
 .pagination-item:focus {
   background-color: var(--orange-color);
   width: 28px;
@@ -1473,17 +1488,20 @@ iframe {
   background-color: var(--very-dark-shade-one);
   width: 13px;
   height: 13px;
+  border: none;
   border-radius: 50%;
   transition: background-color 0.3s ease, width 0.3s ease;
 }
 
-.pagination-item-sec-six:hover,
+.pagination-item-sec-six:hover {
+  background-color: var(--orange-color);
+}
+
 .pagination-item-sec-six:focus {
   background-color: var(--orange-color);
   width: 28px;
   height: 13px;
   border-radius: 100px;
-  cursor: pointer;
 }
 
 .container-button-lave-review {

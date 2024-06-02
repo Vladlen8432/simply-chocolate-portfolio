@@ -88,3 +88,57 @@ setupIngredientSection(
   "descr-ingredient-semi",
   "back-semi"
 );
+
+/* ========== Pagination ========== */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(
+    ".container-images-section-four .container-buy"
+  );
+  const paginationButtons = document.querySelectorAll(
+    ".pagination-section-four .pagination-item"
+  );
+  let itemsPerPage = 4;
+
+  function updateItemsPerPage() {
+    if (window.innerWidth <= 767) {
+      itemsPerPage = 1;
+    } else {
+      itemsPerPage = 4;
+    }
+  }
+
+  function showPage(pageIndex) {
+    items.forEach((item) => {
+      item.classList.add("visually-hidden");
+    });
+
+    if (window.innerWidth <= 767) {
+      const start = pageIndex;
+      const end = start + itemsPerPage;
+      for (let i = start; i < end && i < items.length; i++) {
+        items[i].classList.remove("visually-hidden");
+      }
+    } else {
+      const start = pageIndex;
+      const end = start + itemsPerPage;
+      for (let i = start; i < end && i < items.length; i++) {
+        items[i].classList.remove("visually-hidden");
+      }
+    }
+  }
+
+  paginationButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      showPage(index);
+    });
+  });
+
+  updateItemsPerPage();
+  window.addEventListener("resize", () => {
+    updateItemsPerPage();
+    showPage(0);
+  });
+
+  showPage(0);
+});
